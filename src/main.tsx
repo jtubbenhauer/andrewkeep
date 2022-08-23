@@ -8,6 +8,13 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   fonts: { body: `'Lato', sans-serif`, heading: `'Raleway', sans-serif` },
+  styles: {
+    global: {
+      body: {
+        bg: "gray.50",
+      },
+    },
+  },
 });
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
