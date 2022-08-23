@@ -1,24 +1,62 @@
 import React from "react";
-import heroImage from "../assets/edouard-tamba-J-hYMYa2jY8-unsplash.jpg";
-import { Box, Image } from "@chakra-ui/react";
+import heroImage from "../assets/jr-harris-5DNQ8IPDuuw-unsplash.webp";
+import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 function Hero() {
   return (
-    <Box position={"relative"}>
+    <Flex
+      bgImage={heroImage}
+      h={{ base: 600, md: 700 }}
+      position={"relative"}
+      align={"center"}
+      bgSize={"cover"}
+      bgPosition={"center"}
+    >
+      <Flex
+        pl={{ base: 8, md: 14, lg: 24 }}
+        pr={{ base: 8, md: 14, lg: 24 }}
+        zIndex={1}
+        flexDirection={"column"}
+        gap={8}
+        maxW={750}
+      >
+        <Heading size={{ base: "3xl", md: "3xl", lg: "4xl" }} color={"white"}>
+          Andrew Keep
+        </Heading>
+        <Text
+          color={"white"}
+          fontSize={["sm", "lg", "xl"]}
+          mt={"-2rem"}
+          fontStyle={"italic"}
+        >
+          Principal Engineer, MIEAust, CPEng, NER, RPEQ
+        </Text>
+        <Text color={"white"} maxW={420} fontSize={{ md: "xl" }}>
+          Andrew has over 13 years of work experience as a professional
+          engineer, successfully managing projects, studies and sub-contractors,
+          and delivering inter-discipline engineering scopes of works across a
+          wide variety of design and construction projects.
+        </Text>
+        <Button
+          w={180}
+          bgColor={"brand.900"}
+          color={"white"}
+          rightIcon={<ArrowForwardIcon />}
+          _hover={{ bgColor: "blue.600" }}
+          size={["md", "lg"]}
+        >
+          Get In Touch
+        </Button>
+      </Flex>
       <Box
-        bgColor={"blackAlpha.500"}
         w={"100%"}
         h={"100%"}
+        bgColor={"blackAlpha.600"}
         position={"absolute"}
+        zIndex={"0"}
       ></Box>
-      <Image
-        src={heroImage}
-        maxH={800}
-        w={"100%"}
-        overflow={"hidden"}
-        objectFit={"cover"}
-      />
-    </Box>
+    </Flex>
   );
 }
 
