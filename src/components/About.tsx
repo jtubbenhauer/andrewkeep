@@ -7,17 +7,17 @@ function About() {
       flexDirection={"column"}
       align={"center"}
       justify={"center"}
-      maxW={750}
+      maxW={820}
       margin={"2rem auto 3rem"}
       gap={4}
       pl={8}
       pr={8}
       id={"about"}
     >
-      <Heading fontWeight={"bold"} color={"brand.900"}>
+      <Heading fontWeight={"bold"} color={"#0e4f66"}>
         About
       </Heading>
-      <Flex flexDirection={"column"} gap={4}>
+      <Flex flexDirection={"column"} gap={4} fontSize={{ xl: "lg" }}>
         <Text align={"center"}>
           Andrew commenced his career serving as a field engineer in the
           Australian Army, conducting military engineering operations overseas

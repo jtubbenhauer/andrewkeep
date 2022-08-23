@@ -1,6 +1,6 @@
 import React from "react";
 import heroImage from "../assets/jr-harris-5DNQ8IPDuuw-unsplash.webp";
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Link, Text } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 function Hero() {
@@ -15,12 +15,12 @@ function Hero() {
     >
       <Box></Box>
       <Flex
-        pl={{ base: 8, md: 14, lg: 20, xl: "14rem" }}
+        pl={{ base: 8, md: 14, lg: 20, xl: "16rem" }}
         pr={{ base: 8, md: 14, lg: 24 }}
         zIndex={1}
         flexDirection={"column"}
         gap={8}
-        maxW={800}
+        maxW={820}
       >
         <Heading size={{ base: "3xl", md: "3xl", lg: "4xl" }} color={"white"}>
           Andrew Keep
@@ -39,16 +39,18 @@ function Hero() {
           and delivering inter-discipline engineering scopes of works across a
           wide variety of design and construction projects.
         </Text>
-        <Button
-          w={180}
-          bgColor={"brand.900"}
-          color={"white"}
-          rightIcon={<ArrowForwardIcon />}
-          _hover={{ bgColor: "blue.800" }}
-          size={["md", "lg"]}
-        >
-          Get In Touch
-        </Button>
+        <Link href={"#contact"}>
+          <Button
+            w={180}
+            bgColor={"brand.900"}
+            color={"white"}
+            rightIcon={<ArrowForwardIcon />}
+            _hover={{ bgColor: "blue.800" }}
+            size={["md", "lg"]}
+          >
+            Get In Touch
+          </Button>
+        </Link>
       </Flex>
       <Box
         w={"100%"}

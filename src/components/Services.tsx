@@ -30,6 +30,7 @@ function Services() {
       pb={12}
       pl={4}
       pr={4}
+      id={"services"}
     >
       <Heading mb={[10, 10, 12]}>Services</Heading>
       <Flex
@@ -50,6 +51,7 @@ function Services() {
         flexDirection={{ base: "column", md: "row" }}
         gap={{ md: 14 }}
         fontStyle={"italic"}
+        mb={4}
       >
         <UnorderedList fontSize={["sm", "sm", "md"]}>
           <ListItem>Deep and shallow foundation design</ListItem>
