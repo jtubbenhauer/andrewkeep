@@ -13,13 +13,14 @@ function Hero() {
       bgSize={"cover"}
       bgPosition={"center"}
     >
+      <Box></Box>
       <Flex
-        pl={{ base: 8, md: 14, lg: 24 }}
+        pl={{ base: 8, md: 14, lg: 20, xl: "14rem" }}
         pr={{ base: 8, md: 14, lg: 24 }}
         zIndex={1}
         flexDirection={"column"}
         gap={8}
-        maxW={750}
+        maxW={800}
       >
         <Heading size={{ base: "3xl", md: "3xl", lg: "4xl" }} color={"white"}>
           Andrew Keep
@@ -43,7 +44,7 @@ function Hero() {
           bgColor={"brand.900"}
           color={"white"}
           rightIcon={<ArrowForwardIcon />}
-          _hover={{ bgColor: "blue.600" }}
+          _hover={{ bgColor: "blue.800" }}
           size={["md", "lg"]}
         >
           Get In Touch
