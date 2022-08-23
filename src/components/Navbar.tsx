@@ -3,7 +3,16 @@ import logo from "../assets/ak-logo2.png";
 import { Flex, Image } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
-const MENU_ITEMS = {};
+export interface MenuItem {
+  label: string;
+  href: string;
+}
+
+const MENU_ITEMS: MenuItem[] = [
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Contact", href: "#contact" },
+];
 
 function Navbar() {
   return (
