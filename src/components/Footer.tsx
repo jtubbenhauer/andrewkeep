@@ -10,8 +10,8 @@ function Footer() {
       color={"white"}
       p={6}
     >
-      <Text>
-        © 2022 Andrew Keep | Website by{" "}
+      <Text textAlign={'center'}>
+        © 2022 Andrew Keep. ABN 80 364 711 648 | Website by{" "}
         <Link href={"https://jacktubbenhauer.com"} color={"blue.100"}>
           Jack Tubbenhauer
         </Link>
