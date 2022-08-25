@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/ak-logo2.png";
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex, IconButton, Image } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import DesktopMenu from "./DesktopMenu";
 
@@ -9,17 +9,15 @@ export interface MenuItem {
   href: string;
 }
 
-const MENU_ITEMS: Array<MenuItem> = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
-];
+interface Props {
+  onToggle: () => void;
+  menuItems: Array<MenuItem>;
+}
 
-function Navbar() {
+function Navbar({ onToggle, menuItems }: Props) {
   return (
-    <Box bgColor={"white"}>
+    <Box bgColor={"white"} position={"relative"}>
       <Flex
-        bgColor={"white"}
         p={6}
         align={"center"}
         justify={"space-between"}
@@ -32,13 +30,16 @@ function Navbar() {
           maxW={{ base: "250px", md: "320px" }}
         />
         <Box display={["none", "none", "block"]}>
-          <DesktopMenu items={MENU_ITEMS} />
+          <DesktopMenu items={menuItems} />
         </Box>
-        <HamburgerIcon
-          boxSize={8}
-          color={"brand.900"}
-          cursor={"pointer"}
+        <IconButton
           display={{ base: "block", md: "none" }}
+          variant={"ghost"}
+          onClick={onToggle}
+          aria-label={"Open Mobile Menu Icon"}
+          icon={
+            <HamburgerIcon boxSize={8} color={"brand.900"} cursor={"pointer"} />
+          }
         />
       </Flex>
     </Box>
