@@ -1,22 +1,32 @@
 import React from "react";
-import { Box, Flex, Heading, ListItem, UnorderedList } from "@chakra-ui/react";
-import imgProject from "../assets/project-man.jpg";
-import imgDesign from "../assets/geo-design.jpg";
-import imgSite from "../assets/geo-site.jpg";
+import { Flex, Heading, ListItem, UnorderedList } from "@chakra-ui/react";
+import imgProject from "../assets/project-man.webp";
+import imgDesign from "../assets/geo-design.webp";
+import imgSite from "../assets/geo-site.webp";
 import ServiceItem from "./ServiceItem";
 
 export interface serviceItem {
   title: string;
   image: string;
+  alt: string;
 }
 
 const services: Array<serviceItem> = [
   {
     title: "Project Management",
     image: imgProject,
+    alt: "Project Management",
   },
-  { title: "Site Investigation", image: imgSite },
-  { title: "Geotechnical Design", image: imgDesign },
+  {
+    title: "Site Investigation",
+    image: imgSite,
+    alt: "Geographical Site Investigation",
+  },
+  {
+    title: "Geotechnical Design",
+    image: imgDesign,
+    alt: "Geotechnical Rock Wall Design",
+  },
 ];
 
 function Services() {
@@ -41,7 +51,12 @@ function Services() {
         mb={14}
       >
         {services.map((i) => (
-          <ServiceItem key={i.title} title={i.title} image={i.image} />
+          <ServiceItem
+            key={i.title}
+            title={i.title}
+            image={i.image}
+            alt={i.alt}
+          />
         ))}
       </Flex>
       <Heading size={"md"} mb={6} textAlign={"center"}>

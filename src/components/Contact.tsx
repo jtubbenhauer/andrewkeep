@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Flex, Image } from "@chakra-ui/react";
-import image from "../assets/contact.jpg";
+import image from "../assets/contact.webp";
 import ContactForm from "./ContactForm";
 
 function Contact() {
@@ -13,6 +13,7 @@ function Contact() {
             objectFit={"cover"}
             objectPosition={"center"}
             h={"100%"}
+            alt={"Man Typing At Laptop"}
           />
         </Box>
         <ContactForm />
