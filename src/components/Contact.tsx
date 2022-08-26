@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -12,8 +12,11 @@ import {
 } from "@chakra-ui/react";
 import image from "../assets/contact.jpg";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { Bars } from "react-loader-spinner";
 
 function Contact() {
+  const [loading, setLoading] = useState(false);
+
   return (
     <Box id={"contact"}>
       <Flex flexDirection={{ base: "column", lg: "row" }}>
@@ -63,6 +66,15 @@ function Contact() {
             >
               Submit
             </Button>
+            <Bars
+              height="50"
+              width="50"
+              color="#5cafce"
+              ariaLabel="bars-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+            />
           </Flex>
         </Flex>
       </Flex>
