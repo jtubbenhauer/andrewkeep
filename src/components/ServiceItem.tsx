@@ -12,6 +12,7 @@ function ServiceItem({ title, image, alt }: serviceItem) {
         h={250}
         boxShadow={"lg"}
         alt={alt}
+        fit={"cover"}
       />
       <Heading fontSize={"xl"} textAlign={"center"}>
         {title}

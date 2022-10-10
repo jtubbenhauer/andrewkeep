@@ -1,8 +1,8 @@
 import React from "react";
 import { Flex, Heading, ListItem, UnorderedList } from "@chakra-ui/react";
 import imgProject from "../assets/project-man.webp";
-import imgDesign from "../assets/geo-design.webp";
-import imgSite from "../assets/geo-site.webp";
+import imgDesign from "../assets/plaxis3d-2.jpg";
+import imgSite from "../assets/drill-samples.webp";
 import ServiceItem from "./ServiceItem";
 
 export interface serviceItem {
